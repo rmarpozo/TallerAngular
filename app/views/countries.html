@@ -1,7 +1,7 @@
 
 <div ng-controller="CountriesCtrl">
-  <!--<button type="button" ng-click="changeOrder()" class="btn btn-default">
-    <span>Cambiar orden</span>
-  </button>-->
-  <li ng-repeat="country in countries">{{country.name}}</li>
+<button type="button" ng-click="changeOrder()" class="btn btn-default">
+  <span>Cambiar orden</span>
+</button>
+  <li ng-repeat="country in countries | orderBy:'name':reverse">{{country.name}}</li>
 </div>

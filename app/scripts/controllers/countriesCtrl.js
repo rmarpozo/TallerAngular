@@ -9,4 +9,10 @@ angular.module('testAngularApp')
       {name : 'Portugal'},
       {name : 'Francia'}
     ];
+
+    $scope.reverse = false;
+
+    $scope.changeOrder = function () {
+      $scope.reverse = !$scope.reverse;
+    };
   }]);

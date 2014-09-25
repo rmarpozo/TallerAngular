@@ -5,8 +5,10 @@
     <input id="cityInput" type="text" ng-model="city" class="form-control"/>
   </div>
   <button type="button" ng-click="getWeatherData(city)" class="btn btn-default">Tiempo actual</button>
-  <h2>
-    {{weatherData.weather.0.description}}
+  <h2 ng-if="weatherData">
+    {{weatherData.weather.0.description}} - <translated-label text="weatherData.weather.0.description" from="en" to="es"></translated-label>
   </h2>
-
+  <div ng-if="showMap">
+    <google-map center="map.center" zoom="map.zoom"></google-map>
+  </div>
 </div>

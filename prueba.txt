@@ -1,0 +1,6 @@
+https://github.com/rmarpozo/TallerAngular.git
+
+npm install
+bower install
+grunt serve
+npm install -g grunt
