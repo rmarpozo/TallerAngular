@@ -1,2 +1,12 @@
 
-<div class="main">Esto es una prueba</div>
+<div ng-controller="MainCtrl" class="main">
+  <div class="form-group">
+    <label for="cityInput">Ciudad:</label>
+    <input id="cityInput" type="text" ng-model="city" class="form-control"/>
+  </div>
+  <button type="button" ng-click="getWeatherData(city)" class="btn btn-default">Tiempo actual</button>
+  <h2>
+    {{weatherData.weather.0.description}}
+  </h2>
+
+</div>

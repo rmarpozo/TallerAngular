@@ -23,9 +23,8 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
+          <li class="active"><a ng-href="#">El tiempo</a></li>
           <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
         </ul>
         <h3 class="text-muted">Taller AngularJS</h3>
       </div>
@@ -44,6 +43,7 @@
     <![endif]-->
     <!-- endbuild -->
 
+    <script src='http://maps.googleapis.com/maps/api/js?sensor=false'></script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -66,14 +66,20 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/loadingCtrl.js"></script>
+    <script src="scripts/controllers/countriesCtrl.js"></script>
     <script src="scripts/services/dataService.js"></script>
+    <script src="scripts/services/translationService.js"></script>
+    <script src="scripts/directives/translatedLabel.js"></script>
+    <script src="scripts/filters/toUpperCase.js"></script>
     <!-- endbuild -->
 </body>
 </html>
